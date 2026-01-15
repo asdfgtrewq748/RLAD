@@ -12,6 +12,9 @@ venv/
 .ipynb_checkpoints/
 .vscode/
 
+# AI tooling (local)
+.claude/
+
 # Build artifacts (PyInstaller etc)
 build/
 dist/
@@ -19,6 +22,9 @@ dist/
 
 # Large generated outputs / experiment runs
 output*/
+
+# Paper drafts/assets (very large binaries)
+论文/
 
 # OS
 .DS_Store
