@@ -1,0 +1,39 @@
+// LOF Pseudo-Labeling Process
+digraph LOF_Flowchart {
+	graph [fontname=Helvetica fontsize=18 label="LOF-Based Pseudo-Label Generation from Residuals" labelloc=t nodesep=0.5 rankdir=TB ranksep=0.8]
+	node [color="#444444" fontname=Helvetica fontsize=14 shape=rect style=filled]
+	edge [color="#333333" fontname=Helvetica fontsize=11]
+	input_rt [label="Purified Residual Series (Rₜ)" fillcolor="#FFFFFF" shape=cylinder]
+	windowing [label="Sliding Window over Rₜ" fillcolor="#DDEEFF" shape=rect]
+	k_dist [label="1. Calculate k-distance
+For each point p, find distance to k-th nearest neighbor" fillcolor="#DDEEFF"]
+	reach_dist [label="2. Calculate Reachability Distance
+max(k-distance(o), d(p,o))" fillcolor="#DDEEFF"]
+	lrd [label="3. Calculate Local Reachability Density (LRD)
+Inverse of average reachability distance" fillcolor="#DDEEFF"]
+	lof_score [label=<<font point-size="16">4. Calculate Local Outlier Factor (LOF)</font><br/><br/>
+             <font face="Times-Italic">
+             LOF<sub>k</sub>(p) = 
+             <mfrac>
+                 <font point-size="12">1</font>
+                 <font point-size="12">|N<sub>k</sub>(p)|</font>
+             </mfrac>
+             <font point-size="20">∑</font>
+             <font point-size="10"><sub>o∈N<sub>k</sub>(p)</sub></font>
+             <mfrac>
+                 <font point-size="12">LRD(o)</font>
+                 <font point-size="12">LRD(p)</font>
+             </mfrac>
+             </font>> fillcolor="#FFEEDD" shape=rect]
+	threshold [label="Binarize Scores into Pseudo-Labels
+(e.g., using μ + 3σ threshold)" fillcolor="#DDEEFF" shape=diamond style=filled]
+	output_labels [label="High-Quality Pseudo-Labels
+(Normal=0, Abnormal=1)" fillcolor="#FFFFFF" shape=folder]
+	input_rt -> windowing
+	windowing -> k_dist
+	k_dist -> reach_dist
+	reach_dist -> lrd
+	lrd -> lof_score
+	lof_score -> threshold [label="Window Anomaly Scores"]
+	threshold -> output_labels
+}

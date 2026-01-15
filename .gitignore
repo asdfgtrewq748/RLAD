@@ -1,0 +1,28 @@
+# Python cache / virtualenv
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter / editor
+.ipynb_checkpoints/
+.vscode/
+
+# Build artifacts (PyInstaller etc)
+build/
+dist/
+*.spec.bak
+
+# Large generated outputs / experiment runs
+output*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
