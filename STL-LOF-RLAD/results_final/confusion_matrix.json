@@ -1,0 +1,11 @@
+{
+  "TP": 46,
+  "TN": 62,
+  "FP": 3,
+  "FN": 2,
+  "labels": [
+    "normal",
+    "hazardous"
+  ],
+  "source": "results_final/final_metrics.json"
+}

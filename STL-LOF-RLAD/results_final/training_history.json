@@ -1,0 +1,5 @@
+{
+  "status": "not available",
+  "reason": "The locked final run directory did not include episode-level training history.",
+  "source_run": "E:\\xiangmu\\RLAD\\output_rlad_v3_optimized_20250907_143612\\final_metrics.json"
+}

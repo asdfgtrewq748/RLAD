@@ -1,0 +1,5 @@
+model_variant,description,f1,performance_drop,notes
+Full STL-LOF-RLAD,Locked final model result,0.9484536082474228,0.0,From results_final/final_metrics.json
+Without Active Learning,Ablation result requested; independent final-protocol result not available,not available,not available,Archived ablation reports exist but use different data/stride and are not used as final evidence.
+Without LOF using 3sigma,LOF replaced by 3sigma rule,not available,not available,"No audited result under the locked 60/20/20, window=288, step=12 protocol."
+Without STL using LOF on raw data,LOF applied without STL decomposition,not available,not available,"No audited result under the locked 60/20/20, window=288, step=12 protocol."

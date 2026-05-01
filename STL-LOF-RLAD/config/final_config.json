@@ -1,0 +1,30 @@
+{
+  "seed": 42,
+  "window_size": 288,
+  "sliding_step": 12,
+  "train_ratio": 0.6,
+  "val_ratio": 0.2,
+  "test_ratio": 0.2,
+  "split_strategy": "chronological",
+  "normalization": "z-score fitted on training set only",
+  "stl_period": 288,
+  "stl_robust": true,
+  "lof_neighbors": 20,
+  "lof_threshold": "mu + 3sigma estimated from training set",
+  "model": "STL-LOF-RLAD",
+  "reward": {
+    "TP": 5.0,
+    "TN": 1.0,
+    "FN": -3.0,
+    "FP": -0.5
+  },
+  "active_learning_query_budget": 100,
+  "query_strategy": "margin sampling",
+  "locked_result_source": "../output_rlad_v3_optimized_20250907_143612/final_metrics.json",
+  "archived_training_args_source": "../output_rlad_v3_optimized_20250907_143612/training_args.json",
+  "notes": [
+    "The locked archived run used stride=12 and seed=42.",
+    "The archived training_args.json records use_gui=true, but the new reproduction entry point does not launch GUI.",
+    "The final result is locked to the existing JSON and is not retuned by these scripts."
+  ]
+}

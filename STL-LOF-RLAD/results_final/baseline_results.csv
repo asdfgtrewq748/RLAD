@@ -1,0 +1,7 @@
+model,precision,recall,f1,auc_roc,average_precision,notes
+STL + 3sigma,0.625,1.0,0.7692307692307693,0.888888888888889,not available,Collected from comparison_metrics.json; AP not reported in source.
+Autoencoder,0.0,0.0,0.0,0.6777777777777778,not available,Collected from comparison_metrics.json; AP not reported in source.
+Isolation Forest,0.0,0.0,0.0,0.8555555555555556,not available,Collected from comparison_metrics.json; AP not reported in source.
+STL-LOF standalone,0.8181818181818182,0.9,0.8571428571428572,0.9111111111111112,not available,Collected from comparison_metrics.json; AP not reported in source.
+STL-LOF-RLAD,1.0,0.9,0.9473684210526316,1.0,not available,Collected from comparison_metrics.json; AP not reported in source.
+Original Ensemble-RLAD,not available,not available,not available,not available,not available,"Archived script exists, but no audited JSON matching the final protocol was found."
